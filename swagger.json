@@ -86,67 +86,45 @@
         "parameters": [
           {
             "name": "appid",
-            "in": "query",
+            "in": "postData",
             "description": "your appid for accessing the tip",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
-            "in": "query",
+            "in": "postData",
             "description": "your appkey for accessing the tip",
             "required": true,
             "type": "string"
           },
           {
             "name": "title",
-            "in": "query",
+            "in": "postData",
             "description": "ttle for the tip",
             "required": true,
             "type": "string"
           },
           {
             "name": "author",
-            "in": "query",
+            "in": "postData",
             "description": "author of the tip",
             "required": false,
             "type": "string"
           },
           {
-            "name": "summary",
-            "in": "query",
+            "name": "details",
+            "in": "postData",
             "description": "summary for the tip",
             "required": false,
             "type": "string"
           },
           {
-            "name": "body",
-            "in": "query",
+            "name": "image",
+            "in": "postData",
             "description": "full text for the tip",
             "required": false,
             "type": "string"
-          },
-          {
-            "name": "footer",
-            "in": "query",
-            "description": "curated id the tip originated from",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "status",
-            "in": "query",
-            "description": "status of the tip",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "curated_id",
-            "in": "query",
-            "description": "full text for the tip",
-            "required": false,
-            "type": "integer",
-            "format": "id"
           }
         ],
         "responses": {
@@ -224,88 +202,45 @@
           },
           {
             "name": "appid",
-            "in": "query",
+            "in": "postData",
             "description": "your appid for accessing the tip",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
-            "in": "query",
+            "in": "postData",
             "description": "your appkey for accessing the tip",
             "required": true,
             "type": "string"
           },
           {
-            "name": "post_date",
-            "in": "query",
-            "description": "date the tip was posted",
-            "required": false,
-            "type": "string"
-          },
-          {
             "name": "title",
-            "in": "query",
+            "in": "postData",
             "description": "ttle for the tip",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "author",
-            "in": "query",
+            "in": "postData",
             "description": "author of the tip",
             "required": false,
             "type": "string"
           },
           {
-            "name": "summary",
-            "in": "query",
+            "name": "details",
+            "in": "postData",
             "description": "summary for the tip",
             "required": false,
             "type": "string"
           },
           {
-            "name": "body",
-            "in": "query",
+            "name": "image",
+            "in": "postData",
             "description": "full text for the tip",
             "required": false,
             "type": "string"
-          },
-          {
-            "name": "footer",
-            "in": "query",
-            "description": "curated id the tip originated from",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "status",
-            "in": "query",
-            "description": "status of the tip",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "curated_id",
-            "in": "query",
-            "description": "full text for the tip",
-            "required": false,
-            "type": "integer",
-            "format": "id"
-          },
-          {
-            "name": "build_page",
-            "in": "query",
-            "description": "whether or not this tip post needs page built",
-            "required": false,
-            "type": "integer"
-          },
-          {
-            "name": "show_on_site",
-            "in": "query",
-            "description": "Whether or not this tip post will show on any site",
-            "required": false,
-            "type": "integer"
           }
         ],
         "responses": {
@@ -466,7 +401,7 @@
       "delete": {
         "summary": "delete tip tag",
         "description": "delete tip tag",
-        "operationId": "deletetipTag",
+        "operationId": "deleteTipTag",
         "parameters": [
           {
             "name": "tip_id",
@@ -534,36 +469,13 @@
           "description": "author of the tip",
           "type": "string"
         },
-        "summary": {
-          "description": "summary for the tip",
+        "details": {
+          "description": "details for the tip",
           "type": "string"
         },
-        "body": {
-          "description": "full body text of the tip",
+        "image": {
+          "description": "image for the tip",
           "type": "string"
-        },
-        "footer": {
-          "description": "footer text for the tip",
-          "type": "string"
-        },
-        "status": {
-          "description": "status of the tip",
-          "type": "string"
-        },
-        "curated_id": {
-          "description": "curated id the tip originated from",
-          "type": "integer",
-          "format": "id"
-        },
-        "build_page": {
-          "description": "Whether or not this tip post will show on any site",
-          "type": "integer",
-          "format": "id"
-        },
-        "show_on_site": {
-          "description": "curated id the tip originated from",
-          "type": "integer",
-          "format": "id"
         }
       }
     },
