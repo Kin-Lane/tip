@@ -86,42 +86,42 @@
         "parameters": [
           {
             "name": "appid",
-            "in": "query",
+            "in": "formData",
             "description": "your appid for accessing the tip",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
-            "in": "query",
+            "in": "formData",
             "description": "your appkey for accessing the tip",
             "required": true,
             "type": "string"
           },
           {
             "name": "title",
-            "in": "postData",
+            "in": "formData",
             "description": "ttle for the tip",
             "required": true,
             "type": "string"
           },
           {
             "name": "author",
-            "in": "postData",
+            "in": "formData",
             "description": "author of the tip",
             "required": false,
             "type": "string"
           },
           {
             "name": "details",
-            "in": "postData",
+            "in": "formData",
             "description": "summary for the tip",
             "required": false,
             "type": "string"
           },
           {
             "name": "image",
-            "in": "postData",
+            "in": "formData",
             "description": "full text for the tip",
             "required": false,
             "type": "string"
@@ -202,42 +202,42 @@
           },
           {
             "name": "appid",
-            "in": "query",
+            "in": "formData",
             "description": "your appid for accessing the tip",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
-            "in": "query",
+            "in": "formData",
             "description": "your appkey for accessing the tip",
             "required": true,
             "type": "string"
           },
           {
             "name": "title",
-            "in": "postData",
+            "in": "formData",
             "description": "ttle for the tip",
             "required": true,
             "type": "string"
           },
           {
             "name": "author",
-            "in": "postData",
+            "in": "formData",
             "description": "author of the tip",
             "required": false,
             "type": "string"
           },
           {
             "name": "details",
-            "in": "postData",
+            "in": "formData",
             "description": "summary for the tip",
             "required": false,
             "type": "string"
           },
           {
             "name": "image",
-            "in": "postData",
+            "in": "formData",
             "description": "full text for the tip",
             "required": false,
             "type": "string"
