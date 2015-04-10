@@ -76,7 +76,7 @@
           }
         },
         "tags": [
-          "tip"
+          "Tips"
         ]
       },
       "post": {
@@ -161,123 +161,7 @@
           }
         },
         "tags": [
-          "tip"
-        ]
-      }
-    },
-    "/tip/published/": {
-      "get": {
-        "summary": "published tips",
-        "description": "published tips",
-        "operationId": "getPublishedtips",
-        "parameters": [
-          {
-            "name": "appid",
-            "in": "query",
-            "description": "your appid for accessing the tip",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "appkey",
-            "in": "query",
-            "description": "your appkey for accessing the tip",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "page",
-            "in": "query",
-            "description": "which page of results to show",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "count",
-            "in": "query",
-            "description": "how many to show on page",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "sort",
-            "in": "query",
-            "description": "which field to sort by",
-            "required": false,
-            "type": "string"
-          }          
-        ],
-        "responses": {
-          "200": {
-            "description": "tip Response",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/tip"
-              }
-            }
-          }
-        },
-        "tags": [
-          "tip"
-        ]
-      }
-    },
-    "/tip/draft/": {
-      "get": {
-        "summary": "draft tips",
-        "description": "draft tips",
-        "operationId": "getDrafttips",
-        "parameters": [
-          {
-            "name": "appid",
-            "in": "query",
-            "description": "your appid for accessing the tip",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "appkey",
-            "in": "query",
-            "description": "your appkey for accessing the tip",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "page",
-            "in": "query",
-            "description": "which page of results to show",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "count",
-            "in": "query",
-            "description": "how many to show on page",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "sort",
-            "in": "query",
-            "description": "which field to sort by",
-            "required": false,
-            "type": "string"
-          }          
-        ],
-        "responses": {
-          "200": {
-            "description": "tip response",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/tip"
-              }
-            }
-          }
-        },
-        "tags": [
-          "tip"
+          "Tips"
         ]
       }
     },
@@ -322,7 +206,7 @@
           }
         },
         "tags": [
-          "tip"
+          "Tips"
         ]
       },
       "put": {
@@ -436,7 +320,7 @@
           }
         },
         "tags": [
-          "tip"
+          "Tips"
         ]
       },
       "delete": {
@@ -479,7 +363,7 @@
           }
         },
         "tags": [
-          "tip"
+          "Tips"
         ]
       }
     },
@@ -626,131 +510,6 @@
         },
         "tags": [
           "Tags"
-        ]
-      }
-    },
-    "/tip/tags/byweek/": {
-      "get": {
-        "summary": "tip tags by week",
-        "description": "tip tags by week",
-        "operationId": "gettipTagsByWeek",
-        "parameters": [
-          {
-            "name": "appid",
-            "in": "query",
-            "description": "your appid for accessing the tip",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "appkey",
-            "in": "query",
-            "description": "your appkey for accessing the tip",
-            "required": true,
-            "type": "string"
-          },        
-          {
-            "name": "week",
-            "in": "query",
-            "description": "the week to retrieve tags by",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "year",
-            "in": "query",
-            "description": "the year to retrieve tags by",
-            "required": false,
-            "type": "string"
-          }          
-        ],
-        "responses": {
-          "200": {
-            "description": "tip Tag Response",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/tip"
-              }
-            }
-          }
-        },
-        "tags": [
-          "Tags"
-        ]
-      }
-    },
-    "/tip/tags/byweek/{tag}/tip/": {
-      "get": {
-        "summary": "tip tags by week tips",
-        "description":  "tip tags by week tips",
-        "operationId": "gettipTagCtip",
-        "parameters": [
-          {
-            "name": "tag",
-            "in": "path",
-            "description": "the tag to filter by",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "week",
-            "in": "query",
-            "description": "the week to filter by, defaults to this week",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "tip Tag BLog Responsee",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/tip"
-              }
-            }
-          }
-        },
-        "tags": [
-          "Tags"
-        ]
-      }
-    },
-    "/tip/byweek/": {
-      "get": {
-        "summary": "tips by week",
-        "description": "tips by week",
-        "operationId": "gettipsByWeek",
-        "parameters": [
-          {
-            "name": "appid",
-            "in": "query",
-            "description": "your appid for accessing the tip",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "appkey",
-            "in": "query",
-            "description": "your appkey for accessing the tip",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "tip Response",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/tip"
-              }
-            }
-          }
-        },
-        "tags": [
-          "tip"
         ]
       }
     }
