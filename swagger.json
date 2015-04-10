@@ -86,14 +86,14 @@
         "parameters": [
           {
             "name": "appid",
-            "in": "postData",
+            "in": "query",
             "description": "your appid for accessing the tip",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
-            "in": "postData",
+            "in": "query",
             "description": "your appkey for accessing the tip",
             "required": true,
             "type": "string"
@@ -202,14 +202,14 @@
           },
           {
             "name": "appid",
-            "in": "postData",
+            "in": "query",
             "description": "your appid for accessing the tip",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
-            "in": "postData",
+            "in": "query",
             "description": "your appkey for accessing the tip",
             "required": true,
             "type": "string"
