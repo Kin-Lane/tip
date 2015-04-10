@@ -3,9 +3,9 @@
   "description": "This is my default tip API, using it to manage posts in a single API. It is a Stack Network API resource, with supporting docker container for the API.",
   "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-tip-api.png",
   "tags": [
-    "application programming interface",
+    "Application Programming Interface",
     "API",
-    "tip"
+    "Tips"
   ],
   "created": "2014-04-07",
   "modified": "2014-07-09",
@@ -21,7 +21,7 @@
       "tags": [
         "API",
         "Application Programming Interface",
-        "tip"
+        "Tips"
       ],
       "properties": [
         {
