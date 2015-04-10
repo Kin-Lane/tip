@@ -1,0 +1,829 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "tip",
+    "description": "This is an tip for all my tip entries. I use a single tip system to manage all my sites. Based upon tagging, I then publish each post out to its respective Github Page based repo.",
+    "termsOfService": "http://stack.network/terms-of-service.html",
+    "version": "v2"
+  },
+  "host": "tip.api.kinlane.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/tip/": {
+      "get": {
+        "summary": "all tips",
+        "description": "all tips",
+        "operationId": "gettips",
+        "parameters": [
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the tip",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the tip",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "query",
+            "in": "query",
+            "description": "a text query to search across tip",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "which page of results to show",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "description": "how many to show on page",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "which field to sort by",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "tip response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tip"
+              }
+            }
+          }
+        },
+        "tags": [
+          "tip"
+        ]
+      },
+      "post": {
+        "summary": "add a tip post",
+        "description": "add a tip post",
+        "operationId": "addtip",
+        "parameters": [
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the tip",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the tip",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "description": "ttle for the tip",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "author",
+            "in": "query",
+            "description": "author of the tip",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "summary",
+            "in": "query",
+            "description": "summary for the tip",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "query",
+            "description": "full text for the tip",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "footer",
+            "in": "query",
+            "description": "curated id the tip originated from",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "description": "status of the tip",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "curated_id",
+            "in": "query",
+            "description": "full text for the tip",
+            "required": false,
+            "type": "integer",
+            "format": "id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "tip response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tip"
+              }
+            }
+          }
+        },
+        "tags": [
+          "tip"
+        ]
+      }
+    },
+    "/tip/published/": {
+      "get": {
+        "summary": "published tips",
+        "description": "published tips",
+        "operationId": "getPublishedtips",
+        "parameters": [
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the tip",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the tip",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "which page of results to show",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "description": "how many to show on page",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "which field to sort by",
+            "required": false,
+            "type": "string"
+          }          
+        ],
+        "responses": {
+          "200": {
+            "description": "tip Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tip"
+              }
+            }
+          }
+        },
+        "tags": [
+          "tip"
+        ]
+      }
+    },
+    "/tip/draft/": {
+      "get": {
+        "summary": "draft tips",
+        "description": "draft tips",
+        "operationId": "getDrafttips",
+        "parameters": [
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the tip",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the tip",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "which page of results to show",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "description": "how many to show on page",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "which field to sort by",
+            "required": false,
+            "type": "string"
+          }          
+        ],
+        "responses": {
+          "200": {
+            "description": "tip response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tip"
+              }
+            }
+          }
+        },
+        "tags": [
+          "tip"
+        ]
+      }
+    },
+    "/tip/{tip_id}/": {
+      "get": {
+        "summary": "Retrieve a tip using its slug",
+        "description": "Returns the tip detail",
+        "operationId": "gettip",
+        "parameters": [
+          {
+            "name": "tip_id",
+            "in": "path",
+            "description": "the unique id for tip entry",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the tip",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the tip",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "tip response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tip"
+              }
+            }
+          }
+        },
+        "tags": [
+          "tip"
+        ]
+      },
+      "put": {
+        "summary": "update tip",
+        "description": "update tip",
+        "operationId": "updatetip",
+        "parameters": [
+          {
+            "name": "tip_id",
+            "in": "path",
+            "description": "the unique id for tip entry",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the tip",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the tip",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "post_date",
+            "in": "query",
+            "description": "date the tip was posted",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "description": "ttle for the tip",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "author",
+            "in": "query",
+            "description": "author of the tip",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "summary",
+            "in": "query",
+            "description": "summary for the tip",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "query",
+            "description": "full text for the tip",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "footer",
+            "in": "query",
+            "description": "curated id the tip originated from",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "description": "status of the tip",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "curated_id",
+            "in": "query",
+            "description": "full text for the tip",
+            "required": false,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "build_page",
+            "in": "query",
+            "description": "whether or not this tip post needs page built",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "name": "show_on_site",
+            "in": "query",
+            "description": "Whether or not this tip post will show on any site",
+            "required": false,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "tip response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tip"
+              }
+            }
+          }
+        },
+        "tags": [
+          "tip"
+        ]
+      },
+      "delete": {
+        "summary": "delete tip",
+        "description": "delete tip",
+        "operationId": "deletetip",
+        "parameters": [
+          {
+            "name": "tip_id",
+            "in": "path",
+            "description": "the unique id for tip entry",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the tip",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the tip",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "tip response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tip"
+              }
+            }
+          }
+        },
+        "tags": [
+          "tip"
+        ]
+      }
+    },
+    "/tip/{tip_id}/tags/": {
+      "get": {
+        "summary": "tip tags",
+        "description": "tip tags",
+        "operationId": "gettipTags",
+        "parameters": [
+          {
+            "name": "tip_id",
+            "in": "path",
+            "description": "id for tip",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the tip",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the tip",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "tip Tags Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tag"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tags"
+        ]
+      },
+      "post": {
+        "summary": "add tag to tip",
+        "description": "add tag to tip",
+        "operationId": "addtipTag",
+        "parameters": [
+          {
+            "name": "tip_id",
+            "in": "path",
+            "description": "id for the tip",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the tip",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the tip",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tag",
+            "in": "query",
+            "description": "tag name",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "tip Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tag"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tags"
+        ]
+      }
+    },
+    "/tip/{tip_id}/tags/{tag}": {
+      "delete": {
+        "summary": "delete tip tag",
+        "description": "delete tip tag",
+        "operationId": "deletetipTag",
+        "parameters": [
+          {
+            "name": "tip_id",
+            "in": "path",
+            "description": "id for the tip",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the tip",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the tip",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tag",
+            "in": "path",
+            "description": "tag to remove from tip",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "tip Tag Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tag"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tags"
+        ]
+      }
+    },
+    "/tip/tags/byweek/": {
+      "get": {
+        "summary": "tip tags by week",
+        "description": "tip tags by week",
+        "operationId": "gettipTagsByWeek",
+        "parameters": [
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the tip",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the tip",
+            "required": true,
+            "type": "string"
+          },        
+          {
+            "name": "week",
+            "in": "query",
+            "description": "the week to retrieve tags by",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "year",
+            "in": "query",
+            "description": "the year to retrieve tags by",
+            "required": false,
+            "type": "string"
+          }          
+        ],
+        "responses": {
+          "200": {
+            "description": "tip Tag Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tip"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tags"
+        ]
+      }
+    },
+    "/tip/tags/byweek/{tag}/tip/": {
+      "get": {
+        "summary": "tip tags by week tips",
+        "description":  "tip tags by week tips",
+        "operationId": "gettipTagCtip",
+        "parameters": [
+          {
+            "name": "tag",
+            "in": "path",
+            "description": "the tag to filter by",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "week",
+            "in": "query",
+            "description": "the week to filter by, defaults to this week",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "tip Tag BLog Responsee",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tip"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tags"
+        ]
+      }
+    },
+    "/tip/byweek/": {
+      "get": {
+        "summary": "tips by week",
+        "description": "tips by week",
+        "operationId": "gettipsByWeek",
+        "parameters": [
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the tip",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the tip",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "tip Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tip"
+              }
+            }
+          }
+        },
+        "tags": [
+          "tip"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "tip": {
+      "properties": {
+        "tip_id": {
+          "description": "unique id of the tip",
+          "type": "integer",
+          "format": "id"
+        },
+        "post_date": {
+          "description": "date the tip was posted",
+          "type": "string"
+        },
+        "title": {
+          "description": "ttle for the tip",
+          "type": "string"
+        },
+        "author": {
+          "description": "author of the tip",
+          "type": "string"
+        },
+        "summary": {
+          "description": "summary for the tip",
+          "type": "string"
+        },
+        "body": {
+          "description": "full body text of the tip",
+          "type": "string"
+        },
+        "footer": {
+          "description": "footer text for the tip",
+          "type": "string"
+        },
+        "status": {
+          "description": "status of the tip",
+          "type": "string"
+        },
+        "curated_id": {
+          "description": "curated id the tip originated from",
+          "type": "integer",
+          "format": "id"
+        },
+        "build_page": {
+          "description": "Whether or not this tip post will show on any site",
+          "type": "integer",
+          "format": "id"
+        },
+        "show_on_site": {
+          "description": "curated id the tip originated from",
+          "type": "integer",
+          "format": "id"
+        }
+      }
+    },
+    "tag": {
+      "properties": {
+        "tag_id": {
+          "description": "id for the tag",
+          "type": "integer",
+          "format": "id"
+        },
+        "tag": {
+          "description": "text tag",
+          "type": "string"
+        },
+        "api_count": {
+          "description": "number of items api with tag",
+          "type": "integer"
+        }
+      }
+    }
+  }
+}
