@@ -13,7 +13,7 @@
   "SpecificationVersion": "0.14",
   "apis": [
     {
-      "name": "tip",
+      "name": "Tips",
       "description": "A tip API resource.",
       "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-tip-api.png",
       "humanURL": "https://kin-lane.github.io/tip/",
