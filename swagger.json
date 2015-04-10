@@ -82,7 +82,7 @@
       "post": {
         "summary": "add a tip post",
         "description": "add a tip post",
-        "operationId": "addtip",
+        "operationId": "addTip",
         "parameters": [
           {
             "name": "appid",
