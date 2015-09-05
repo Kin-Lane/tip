@@ -1,0 +1,315 @@
+{
+	"id": "a6588a54-95db-6c28-926a-034da15e0b4c",
+	"name": "Tips",
+	"description": "This is an tip for all my API tips. I use a single tip system to manage all my sites. Based upon tagging, I then publish each post out to its respective Github Page based repo.",
+	"order": [],
+	"folders": [
+		{
+			"id": "828dc285-1710-7e64-ad50-7b2537947b79",
+			"name": "tip",
+			"description": "Folder for tip",
+			"order": [
+				"cf0d88b1-5b04-5953-2cb4-85ebd946a4eb",
+				"5ac0abdf-ecc9-e3a6-7678-f6314fa59aa1",
+				"8d17146c-7539-fa1c-4047-4d51707d98fb",
+				"7ccc91be-b5f9-6f16-f184-fd4780f32018",
+				"7dca51a0-f55b-658e-ba84-58a83b80a964",
+				"3156e58e-8496-3b9b-2314-9afe16ca3170",
+				"e465ceff-ea67-1b34-28d5-d10266176162",
+				"c0325c46-fef4-5e3a-9f10-d2cc876a658a"
+			],
+			"collection_name": "Tips",
+			"collection_id": "a6588a54-95db-6c28-926a-034da15e0b4c",
+			"collection": "1dad1968-9fd3-4fc1-9e9d-95fd6e1757e9",
+			"owner": "27278",
+			"write": true,
+			"collection_owner": "27278"
+		}
+	],
+	"timestamp": 1413302258635,
+	"owner": "27278",
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "3156e58e-8496-3b9b-2314-9afe16ca3170",
+			"headers": "",
+			"url": "https://tip.api.kinlane.com//tip/{{tip_id}}/tags/?appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "tip tags",
+			"descriptionFormat": "html",
+			"time": 1441438546638,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "a6588a54-95db-6c28-926a-034da15e0b4c",
+			"name": "tip tags",
+			"folder": "828dc285-1710-7e64-ad50-7b2537947b79"
+		},
+		{
+			"id": "5ac0abdf-ecc9-e3a6-7678-f6314fa59aa1",
+			"headers": "",
+			"url": "https://tip.api.kinlane.com//tip/",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "POST",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appid",
+					"value": "{{appid}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appkey",
+					"value": "{{appkey}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "title",
+					"value": "{{title}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "author",
+					"value": "{{author}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "details",
+					"value": "{{details}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "image",
+					"value": "{{image}}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "add a tip post",
+			"descriptionFormat": "html",
+			"time": 1441438546638,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "a6588a54-95db-6c28-926a-034da15e0b4c",
+			"name": "add a tip post",
+			"folder": "828dc285-1710-7e64-ad50-7b2537947b79"
+		},
+		{
+			"id": "7ccc91be-b5f9-6f16-f184-fd4780f32018",
+			"headers": "",
+			"url": "https://tip.api.kinlane.com//tip/{{tip_id}}/",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "PUT",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appid",
+					"value": "{{appid}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appkey",
+					"value": "{{appkey}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "title",
+					"value": "{{title}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "author",
+					"value": "{{author}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "details",
+					"value": "{{details}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "image",
+					"value": "{{image}}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "update tip",
+			"descriptionFormat": "html",
+			"time": 1441438546638,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "a6588a54-95db-6c28-926a-034da15e0b4c",
+			"name": "update tip",
+			"folder": "828dc285-1710-7e64-ad50-7b2537947b79"
+		},
+		{
+			"id": "7dca51a0-f55b-658e-ba84-58a83b80a964",
+			"headers": "",
+			"url": "https://tip.api.kinlane.com//tip/{{tip_id}}/?appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "DELETE",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "delete tip",
+			"descriptionFormat": "html",
+			"time": 1441438546638,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "a6588a54-95db-6c28-926a-034da15e0b4c",
+			"name": "delete tip",
+			"folder": "828dc285-1710-7e64-ad50-7b2537947b79"
+		},
+		{
+			"id": "8d17146c-7539-fa1c-4047-4d51707d98fb",
+			"headers": "",
+			"url": "https://tip.api.kinlane.com//tip/{{tip_id}}/?appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "Returns the tip detail",
+			"descriptionFormat": "html",
+			"time": 1441438546638,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "a6588a54-95db-6c28-926a-034da15e0b4c",
+			"name": "Retrieve a tip using its slug",
+			"folder": "828dc285-1710-7e64-ad50-7b2537947b79"
+		},
+		{
+			"id": "c0325c46-fef4-5e3a-9f10-d2cc876a658a",
+			"headers": "",
+			"url": "https://tip.api.kinlane.com//tip/{{tip_id}}/tags/{tag}?appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "DELETE",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "delete tip tag",
+			"descriptionFormat": "html",
+			"time": 1441438546638,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "a6588a54-95db-6c28-926a-034da15e0b4c",
+			"name": "delete tip tag",
+			"folder": "828dc285-1710-7e64-ad50-7b2537947b79"
+		},
+		{
+			"id": "cf0d88b1-5b04-5953-2cb4-85ebd946a4eb",
+			"headers": "",
+			"url": "https://tip.api.kinlane.com//tip/?appid={{appid}}&appkey={{appkey}}&query={{query}}&page={{page}}&count={{count}}&sort={{sort}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "all tips",
+			"descriptionFormat": "html",
+			"time": 1441438546638,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "a6588a54-95db-6c28-926a-034da15e0b4c",
+			"name": "all tips",
+			"folder": "828dc285-1710-7e64-ad50-7b2537947b79"
+		},
+		{
+			"id": "e465ceff-ea67-1b34-28d5-d10266176162",
+			"headers": "",
+			"url": "https://tip.api.kinlane.com//tip/{{tip_id}}/tags/?appid={{appid}}&appkey={{appkey}}&tag={{tag}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "POST",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "add tag to tip",
+			"descriptionFormat": "html",
+			"time": 1441438546638,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "a6588a54-95db-6c28-926a-034da15e0b4c",
+			"name": "add tag to tip",
+			"folder": "828dc285-1710-7e64-ad50-7b2537947b79"
+		}
+	]
+}
