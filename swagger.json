@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "tip",
-    "description": "This is an tip for all my tip entries. I use a single tip system to manage all my sites. Based upon tagging, I then publish each post out to its respective Github Page based repo.",
+    "title": "Tips",
+    "description": "This is an tip for all my API tips. I use a single tip system to manage all my sites. Based upon tagging, I then publish each post out to its respective Github Page based repo.",
     "termsOfService": "http://stack.network/terms-of-service.html",
     "version": "v2"
   },
@@ -19,7 +19,7 @@
       "get": {
         "summary": "all tips",
         "description": "all tips",
-        "operationId": "gettips",
+        "operationId": "getTips",
         "parameters": [
           {
             "name": "appid",
