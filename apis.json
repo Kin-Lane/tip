@@ -1,4 +1,4 @@
-[{
+{
 	"name": "Kin Lane Tip API",
 	"description": "To compliment my questions, and certification APis, I created this tip API to offer tips along with the answers to questions, and that might encourage an API provider, or consumer to evolve towards a certification. This API is still in development, but hopefully some day will be a wealth of tips about how to do APis.",
 	"image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-tip-api.png",
@@ -6,7 +6,7 @@
 	"tags": ["Kin Lane Tip API"],
 	"created": "2016-04-04",
 	"modified": "2016-04-04",
-	"url": "https://kin-lane.github.io/tip/"
+	"url": "https://kin-lane.github.io/tip/",
 	"specificationVersion": "0.14",
 	"apis": [{
 		"name": "Kin Lane Tip API",
@@ -117,4 +117,4 @@
 		"x-twitter": "apievangelist",
 		"email": "info@apievangelist.com"
 	}]
-}]
+}
